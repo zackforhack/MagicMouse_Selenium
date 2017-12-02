@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="/Users/amandayang/Downloads/selenium-java-3.8.0/libs/gson-2.8.2.jar"/>
 	<classpathentry kind="lib" path="/Users/amandayang/Downloads/selenium-java-3.8.0/libs/guava-23.0.jar"/>
 	<classpathentry kind="lib" path="/Users/amandayang/Downloads/selenium-java-3.8.0/libs/httpcore-4.4.6.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
