@@ -2,44 +2,44 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2017-12-02T07:48:06Z" name="Test - Suite" finished-at="2017-12-02T07:48:32Z" duration-ms="25458">
+  <suite started-at="2017-12-02T09:21:16Z" name="Test - Suite" finished-at="2017-12-02T09:21:44Z" duration-ms="27368">
     <groups>
     </groups>
-    <test started-at="2017-12-02T07:48:06Z" name="MagicMouse - QA" finished-at="2017-12-02T07:48:32Z" duration-ms="25458">
+    <test started-at="2017-12-02T09:21:16Z" name="MagicMouse - QA" finished-at="2017-12-02T09:21:44Z" duration-ms="27368">
       <class name="test.TestNG">
-        <test-method is-config="true" signature="setupBeforeSuite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:05Z" name="setupBeforeSuite" finished-at="2017-12-02T02:48:06Z" duration-ms="1300" status="PASS">
+        <test-method is-config="true" signature="setupBeforeSuite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:13Z" name="setupBeforeSuite" finished-at="2017-12-02T04:21:16Z" duration-ms="2751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBeforeSuite -->
-        <test-method signature="launchSite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:06Z" name="launchSite" description="STEP 1: Go to http://store.demoqa.com/" finished-at="2017-12-02T02:48:09Z" duration-ms="3006" status="PASS">
+        <test-method signature="launchSite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:16Z" name="launchSite" description="STEP 1: Go to http://store.demoqa.com/" finished-at="2017-12-02T04:21:19Z" duration-ms="2493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchSite -->
-        <test-method signature="selectAccessories()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:09Z" name="selectAccessories" description="STEP 2: Go to Product category and select Accessories" finished-at="2017-12-02T02:48:13Z" duration-ms="3160" status="PASS">
+        <test-method signature="selectAccessories()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:19Z" name="selectAccessories" description="STEP 2: Go to Product category and select Accessories" finished-at="2017-12-02T04:21:21Z" duration-ms="2803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAccessories -->
-        <test-method signature="addMagicMouseToCart()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:13Z" name="addMagicMouseToCart" description="STEP 3: Click on “Add to Cart” for just Magic Mouse" finished-at="2017-12-02T02:48:13Z" duration-ms="87" status="PASS">
+        <test-method signature="addMagicMouseToCart()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:21Z" name="addMagicMouseToCart" description="STEP 3: Click on “Add to Cart” for just Magic Mouse" finished-at="2017-12-02T04:21:23Z" duration-ms="1273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addMagicMouseToCart -->
-        <test-method signature="checkoutAndConfirmMagicMouse()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:13Z" name="checkoutAndConfirmMagicMouse" description="STEP 4: Click on “Checkout” and confirm you have 1 Magic Mouse in your Check-Out Page" finished-at="2017-12-02T02:48:16Z" duration-ms="3817" status="PASS">
+        <test-method signature="checkoutAndConfirmMagicMouse()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:23Z" name="checkoutAndConfirmMagicMouse" description="STEP 4: Click on “Checkout” and confirm you have 1 Magic Mouse in your Check-Out Page" finished-at="2017-12-02T04:21:26Z" duration-ms="3298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutAndConfirmMagicMouse -->
-        <test-method signature="clickOnContinue()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:16Z" name="clickOnContinue" description="STEP 5: After confirming, click on Continue" finished-at="2017-12-02T02:48:17Z" duration-ms="147" status="PASS">
+        <test-method signature="clickOnContinue()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:26Z" name="clickOnContinue" description="STEP 5: After confirming, click on Continue" finished-at="2017-12-02T04:21:26Z" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnContinue -->
-        <test-method signature="enterBillDataAndPurchase()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:17Z" name="enterBillDataAndPurchase" description="STEP 6: Enter test data needed for email,  billing/contact details and billing/contact details and click Purchase" finished-at="2017-12-02T02:48:32Z" duration-ms="15216" status="PASS">
+        <test-method signature="enterBillDataAndPurchase()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:26Z" name="enterBillDataAndPurchase" description="STEP 6: Enter test data needed for email,  billing/contact details and billing/contact details and click Purchase" finished-at="2017-12-02T04:21:43Z" duration-ms="17022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterBillDataAndPurchase -->
-        <test-method signature="confirmOrder()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:32Z" name="confirmOrder" description="STEP 7: Confirm that you have placed the Order in ‘Transaction Results’ page" finished-at="2017-12-02T02:48:32Z" duration-ms="2" status="PASS">
+        <test-method signature="confirmOrder()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:43Z" name="confirmOrder" description="STEP 7: Confirm that you have placed the Order in ‘Transaction Results’ page" finished-at="2017-12-02T04:21:44Z" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confirmOrder -->
-        <test-method is-config="true" signature="setupAfterSuite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T02:48:37Z" name="setupAfterSuite" finished-at="2017-12-02T02:48:37Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupAfterSuite()[pri:0, instance:test.TestNG@37271612]" started-at="2017-12-02T04:21:49Z" name="setupAfterSuite" finished-at="2017-12-02T04:21:49Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupAfterSuite -->

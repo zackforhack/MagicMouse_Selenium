@@ -6,9 +6,8 @@
       <class name="test.TestNG">
         <methods>
           <include name="setupAfterSuite"/>
-          <include name="enterBillDataAndPurchase"/>
           <include name="setupBeforeSuite"/>
-          <include name="clickOnContinue"/>
+          <include name="confirmOrder"/>
         </methods>
       </class> <!-- test.TestNG -->
     </classes>

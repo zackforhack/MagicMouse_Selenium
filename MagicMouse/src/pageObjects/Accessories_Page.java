@@ -25,6 +25,14 @@ public class Accessories_Page {
 
 	}
     
+    public static Boolean item_Has_been_added_show(WebDriver driver){
+    
+    if(driver.findElement(By.xpath("//div[@class='alert addtocart' and @style='display: block;']"))!= null)
+    return true;
+    	
+    else return false;
+    	}
+    
     
     
 
