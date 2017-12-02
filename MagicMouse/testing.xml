@@ -1,0 +1,17 @@
+<suite name="Test - Suite" >
+ <test name="MagicMouse - QA" >
+  <classes>
+   <class name="test.TestNG" preserve-order="true"> 
+          <methods>
+          <include name="launchSite" />
+          <include name="selectAccessories" />
+          <include name="addMagicMouseToCart" />
+          <include name="checkoutAndConfirmMagicMouse" />
+          <include name="clickOnContinue" />
+          <include name="enterBillDataAndPurchase" />
+          <include name="confirmOrder" />
+        </methods>
+   </class>
+  </classes>
+ </test>
+</suite>

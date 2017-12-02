@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test - Suite]">
+  <test name="MagicMouse - QA(failed)">
+    <classes>
+      <class name="test.TestNG">
+        <methods>
+          <include name="setupAfterSuite"/>
+          <include name="enterBillDataAndPurchase"/>
+          <include name="setupBeforeSuite"/>
+          <include name="clickOnContinue"/>
+        </methods>
+      </class> <!-- test.TestNG -->
+    </classes>
+  </test> <!-- MagicMouse - QA(failed) -->
+</suite> <!-- Failed suite [Test - Suite] -->
