@@ -6,12 +6,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utility.Log;
+
 public class Accessories_Page {
     private static WebElement element = null;
     
     public static WebElement magic_Mouse_col(WebDriver driver){
 
 	    element = driver.findElement(By.xpath("//div[h2[a[contains(text(),'Magic Mouse')]]]"));
+	    
+	    Log.info("Link to Magic Mouse Product Column found");
 
 	    return element;
 
@@ -20,6 +24,8 @@ public class Accessories_Page {
     public static WebElement magic_Mouse_Add_To_Cart_Button(WebDriver driver){
 
 	    element = driver.findElement(By.xpath("//input[@name='Buy']"));
+	    
+	    Log.info("Magic Mouse Add To Cart Button found");
 
 	    return element;
 
@@ -28,14 +34,11 @@ public class Accessories_Page {
     public static Boolean item_Has_been_added_show(WebDriver driver){
     
     if(driver.findElement(By.xpath("//div[@class='alert addtocart' and @style='display: block;']"))!= null)
-    return true;
+    {  	Log.info("Item Has Been Added Box SHow");
+    	 	return true;
+    }
     	
     else return false;
     	}
-    
-    
-    
-
-
 
 }

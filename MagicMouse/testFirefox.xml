@@ -1,5 +1,6 @@
-<suite name="Test - Suite" >
- <test name="MagicMouse - QA" >
+<suite name="Test - Suite - Firefox" >
+ <parameter name="broswer" value="Firefox" />
+ <test name="MagicMouse - QA Firefox" >
   <classes>
    <class name="test.java.NewTest" preserve-order="true"> 
           <methods>

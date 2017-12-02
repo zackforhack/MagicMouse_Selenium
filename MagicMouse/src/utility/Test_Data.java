@@ -1,8 +1,10 @@
-package test;
+package utility;
 
 public interface Test_Data {
 	
 	static final long Implicit_Wait_Time_Seconds = 15;
+	
+	static final String Product_Name = "Magic Mouse";
 	
 	
 	

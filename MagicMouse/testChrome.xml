@@ -1,0 +1,18 @@
+<suite name="Test - Suite - Chrome" >
+ <parameter name="broswer" value="Chrome" />
+ <test name="MagicMouse - QA Chrome" >
+  <classes>
+   <class name="test.java.NewTest" preserve-order="true"> 
+          <methods>
+          <include name="launchSite" />
+          <include name="selectAccessories" />
+          <include name="addMagicMouseToCart" />
+          <include name="checkoutAndConfirmMagicMouse" />
+          <include name="clickOnContinue" />
+          <include name="enterBillDataAndPurchase" />
+          <include name="confirmOrder" />
+        </methods>
+   </class>
+  </classes>
+ </test>
+</suite>

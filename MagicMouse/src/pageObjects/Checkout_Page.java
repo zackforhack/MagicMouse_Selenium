@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utility.Log;
+
 public class Checkout_Page {
 
     private static WebElement element = null;
@@ -13,6 +15,8 @@ public class Checkout_Page {
     public static WebElement lnk_continue(WebDriver driver){
 
     	    element = driver.findElement(By.xpath("//a[span[contains(text(),'Continue')]]"));
+    	    
+    	    Log.info("Link to Continue found");
 
 	    return element;
 
@@ -27,6 +31,8 @@ public class Checkout_Page {
     public static String get_Top_Product_Quantity(WebDriver driver){
 
 	    element = driver.findElement(By.xpath("//td[@class='wpsc_product_quantity wpsc_product_quantity_0']/child::*"));
+	    
+	    Log.info("Top Product Quantity found");
 	    
 	    return element.findElement(By.xpath("//input[@name='quantity']")).getAttribute("value");
 
