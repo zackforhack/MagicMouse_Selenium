@@ -5,10 +5,14 @@ package pageObjects;
     import org.openqa.selenium.WebDriver;
 
     import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
  public class Home_Page {
 
+	 
     private static WebElement element = null;
+    
 
  public static WebElement lnk_MyAccount(WebDriver driver){
 
@@ -35,7 +39,7 @@ package pageObjects;
 	}
  
  public static WebElement lnk_accessories(WebDriver driver){
-
+	 
 	    element = driver.findElement(By.xpath("//a[contains(text(),'Accessories')]"));
 
 	    return element;
@@ -43,7 +47,7 @@ package pageObjects;
 	}
  
  public static WebElement lnk_Checkout(WebDriver driver){
-
+	 
 	    element = driver.findElement(By.xpath("//a[@title='Checkout']"));
 
 	    return element;
