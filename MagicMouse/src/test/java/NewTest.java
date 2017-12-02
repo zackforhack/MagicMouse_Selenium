@@ -178,13 +178,29 @@ public class NewTest {
 		  try {
 			  
 			 if(broswer.equalsIgnoreCase("chrome")) {
-				 System.setProperty("webdriver.chrome.driver", "/Users/amandayang/Downloads/chromedriver");
-					driver = new ChromeDriver();
+				 
+				 String OS = System.getProperty("os.name").toLowerCase();
+				 
+				 if(OS.indexOf("win") >= 0);
+				 System.setProperty("webdriver.chrome.driver", "resource/windowsDrivers/chromedriver.exe");
+				 
+				 if(OS.indexOf("mac") >= 0);
+				 System.setProperty("webdriver.chrome.driver", "resource/macDrivers/chromedriver");
+					
+				 driver = new ChromeDriver();
 			 }
 			 
 			 else if(broswer.equalsIgnoreCase("firefox")) {
-				 System.setProperty("webdriver.gecko.driver", "/Users/amandayang/Downloads/geckodriver");
-					driver = new FirefoxDriver();
+				 
+				 String OS = System.getProperty("os.name").toLowerCase();
+				 
+				 if(OS.indexOf("win") >= 0);
+				 System.setProperty("webdriver.gecko.driver", "resource/windowsDrivers/geckodriver.exe");
+				 
+				 if(OS.indexOf("mac") >= 0);
+				 System.setProperty("webdriver.gecko.driver", "resource/macDrivers/geckodriver");
+
+			     driver = new FirefoxDriver();
 			 }
 		
 			driver.manage().timeouts().implicitlyWait(Test_Data.Implicit_Wait_Time_Seconds, TimeUnit.SECONDS);

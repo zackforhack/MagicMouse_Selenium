@@ -48,4 +48,19 @@
   		<version>2.20.1</version>
   	</dependency>
   </dependencies>
+  
+  <profiles>
+  	<profile>
+  		<id>windows-environment</id>
+     	<activation>
+        		<os><family>windows</family></os>
+    		</activation>
+  	</profile>
+  	<profile>
+  		<id>mac-environment</id>
+     	<activation>
+        		<os><family>mac</family></os>
+    		</activation>
+  	</profile>
+  </profiles>
 </project>
