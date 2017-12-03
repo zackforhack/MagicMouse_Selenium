@@ -1,5 +1,8 @@
 package utility;
  
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.log4j.Logger;
  
  public class Log {
@@ -28,7 +31,7 @@ import org.apache.log4j.Logger;
  
  public static void endTestCase(String sTestCaseName){
  
-	Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+ sTestCaseName + "             XXXXXXXXXXXXXXXXXXXXXX");
+	Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-ENDING TestCase-"+ sTestCaseName + "             XXXXXXXXXXXXXXXXXXXXXX");
  
 	Log.info("X");
  

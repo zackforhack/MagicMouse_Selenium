@@ -40,7 +40,7 @@ public class NewTest {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
         System.setProperty("current.date.time", dateFormat.format(new Date()));
     }
-    
+	
 	public WebDriver driver;
 	
 	  @Test (description="STEP 1: Go to http://store.demoqa.com/")

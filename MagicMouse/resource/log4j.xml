@@ -8,7 +8,7 @@
  
 <param name="Threshold" value="INFO" />
  
-<param name="File" value="logfile_${current.date.time}.log"/>
+<param name="File" value="target/log4j-logfiles/logfile_${current.date.time}.log"/>
  
 <layout class="org.apache.log4j.PatternLayout">
  

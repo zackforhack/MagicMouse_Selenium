@@ -18,7 +18,7 @@ public class Transaction_Results_Page {
 	    
     	}catch (Exception e){
 	    
-	    Log.info("Top Product Name is not found");
+	    Log.error("Top Product Name is not found");
 	    
 		throw(e);
 	    
@@ -36,7 +36,7 @@ public class Transaction_Results_Page {
 	    
     	}catch (Exception e){
 	    
-	    Log.info("Top Product Quantity found");
+	    Log.error("Top Product Quantity found");
 	    
 		throw(e);
 	    

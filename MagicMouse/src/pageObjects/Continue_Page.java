@@ -16,101 +16,180 @@ public class Continue_Page {
     
     public static WebElement txtbx_Billingemail(WebDriver driver){
     	
+    		try {
+    	
     	    WebDriverWait wait = new WebDriverWait(driver, 15);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@title='billingemail']")));
+        
+    		} catch (Exception e){
 
+	    Log.error("Textbox Billingemail is not found");
 	    
-	    Log.info("Textbox Billingemail found");
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static WebElement txtbx_Billingfirstname(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@title='billingfirstname']"));
 	    
-	    Log.info("Textbox Billingfirstname found");
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Billingfirstname is not found");
+	    
+		throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static WebElement txtbx_Billinglastname(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@title='billinglastname']"));
 	    
-	    Log.info("Textbox Billinglastname found");
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Billinglastname is not found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static WebElement txtbx_Billingaddress(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//textarea[@title='billingaddress']"));
 	    
-	    Log.info("Textbox Billingaddress found");
-
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Billingaddress is not found");
+	    
+	    throw(e);
+	    
+    		}
+	    
 	    return element;
 
 	}
     
     public static WebElement txtbx_Billingcity(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@title='billingcity']"));
 	    
-	    Log.info("Textbox Billingcity found");
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Billingcity found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
 
     public static WebElement txtbx_Billingphone(WebDriver driver){
+    	
+    	try {
 
 	    element = driver.findElement(By.xpath("//input[@title='billingphone']"));
 	    
-	    Log.info("Textbox Billingphone number found");
+    		}catch (Exception e){
+	    
+	    Log.info("Textbox Billingphone number is not found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static Select dropdown_Billingcountry(WebDriver driver){
+    	
+    		try {
 
     	    dropdown = new Select(driver.findElement(By.id("wpsc_checkout_form_7")));
     	    
-    	    Log.info("Dropdown box Billingcountry found");
+    		}catch (Exception e){
+    	    
+    	    Log.error("Dropdown box Billingcountry is not found");
+    	    
+    	    throw(e);
+    	    
+    		}
 
 	    return dropdown;
 
 	}
     
     public static WebElement txtbx_Billingstate(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@title='billingstate']"));
 	    
-	    Log.info("Textbox Billingstate number found");
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Billingstate number is not found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static WebElement txtbx_Shippingstate(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@title='shippingstate']"));
 	    
-	    Log.info("Textbox Shippingstate number found");
+    		}catch (Exception e){
+	    
+	    Log.error("Textbox Shippingstate number is not found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
 	}
     
     public static WebElement purchase_btn(WebDriver driver){
+    	
+    		try {
 
 	    element = driver.findElement(By.xpath("//input[@value='Purchase']"));
 	    
-	    Log.info("Purchase button found");
+    		}catch (Exception e){
+	    
+	    Log.info("Purchase button is not found");
+	    
+	    throw(e);
+	    
+    		}
 
 	    return element;
 
