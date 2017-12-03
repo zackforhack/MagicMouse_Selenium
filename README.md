@@ -25,7 +25,7 @@ Firefox and Chrome installed in your Mac/Windows computer
 
 ## Usage
 
-For running the test, just execute command: mvn clean package
+For running the test, just execute command: mvn test
 
 ## Logging / Reporting
 
