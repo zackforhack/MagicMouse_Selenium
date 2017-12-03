@@ -46,19 +46,35 @@ public class NewTest {
 	  @Test (description="STEP 1: Go to http://store.demoqa.com/")
 	  public void launchSite() throws InterruptedException {
 		    Log.startTestCase("STEP 1: Go to http://store.demoqa.com/");
+		    
+		    try {
+		    	
+		    
 			driver.get("http://store.demoqa.com");
 			
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 		    wait.until(ExpectedConditions.titleContains("ONLINE STORE"));
-		    
+	    
 			assertEquals(driver.getTitle(), "ONLINE STORE | Toolsqa Dummy Test site");
-			Log.endTestCase("STEP 1");
+			
+		    }catch (Exception e){
+
+		        Log.error("Error while executing Step 1 Test");
+		    }    
+		    
+		    finally {
+		    	
+		    	Log.endTestCase("STEP 1");
+		    	
+		    }
 	  }
 		
 	  @Test (description="STEP 2: Go to Product category and select Accessories")
 	  public void selectAccessories() throws InterruptedException {
 
 		    Log.startTestCase("STEP 2: Go to Product category and select Accessories");
+		    
+		    try {
 			Actions actions = new Actions(driver);
 			WebElement menu = Home_Page.product_Category_tab(driver);
 			actions.moveToElement(menu);
@@ -71,17 +87,40 @@ public class NewTest {
 		    wait.until(ExpectedConditions.titleContains("Accessories"));
 			
 			assertEquals(driver.getTitle(), "Accessories | ONLINE STORE");
+			
+		    }catch (Exception e){
+
+		    	Log.error("Error while executing Step 2 Test");
+		    	
+		    } 
+		    
+		    finally {
+		    	
 			Log.endTestCase("STEP 2");
+			
+		    }
 	  }
 	  
 	  @Test (description="STEP 3: Click on “Add to Cart” for just Magic Mouse")
 	  public void addMagicMouseToCart() throws InterruptedException {
 		  
 		  	Log.startTestCase("STEP 3: Click on “Add to Cart” for just Magic Mouse");
+		  	
+		  	try {
+		  		
 			Accessories_Page.magic_Mouse_Add_To_Cart_Button(driver).click();
 			Log.info("Click Add to Cart Button");
 			assertTrue(Accessories_Page.item_Has_been_added_show(driver));
-			Log.endTestCase("STEP 3");
+			
+		  	}catch (Exception e){
+
+		    	Log.error("Error while executing Step 3 Test");
+		    	
+		    } 
+		  	
+		  	finally {
+		  		Log.endTestCase("STEP 3");
+		  	}
 			
 			
 	  }
@@ -90,6 +129,8 @@ public class NewTest {
 	  public void checkoutAndConfirmMagicMouse() throws InterruptedException {
 		  
 		  	Log.startTestCase("STEP 4: Click on “Checkout” and confirm you have 1 Magic Mouse in your Check-Out Page");
+		  	
+		  	try {
 			Home_Page.lnk_Checkout(driver).click();
 			Log.info("Click Checkout Button");
 			
@@ -104,7 +145,15 @@ public class NewTest {
 			
 			Log.info("Confirm Have 1 Magic Mouse In Checkout Page");
 			
-			Log.endTestCase("STEP 4");
+		  	} catch (Exception e){
+
+		    	Log.error("Error while executing Step 4 Test");
+		    	
+		    } 
+			
+		  	finally {
+		  		Log.endTestCase("STEP 4");
+		  	};
 
 	  }	
 	  
@@ -112,6 +161,8 @@ public class NewTest {
 	  public void clickOnContinue() throws InterruptedException {
 		  
 		  	Log.startTestCase("STEP 5: After confirming, click on Continue");
+		  	
+		  	try {
 			
 			Checkout_Page.lnk_continue(driver).click();
 			Log.info("Click on Continue Button");
@@ -121,7 +172,15 @@ public class NewTest {
 		    
 			assertEquals(driver.getTitle(), "Checkout | ONLINE STORE");
 			
-			Log.endTestCase("STEP 5");
+		  	} catch (Exception e){
+
+		    	Log.error("Error while executing Step 5 Test");
+		    	
+		    } 
+			
+			finally {
+		  		Log.endTestCase("STEP 5");
+		  	};
 
 	  }
 	  
@@ -130,7 +189,9 @@ public class NewTest {
 	  public void enterBillDataAndPurchase() throws InterruptedException {
 		  
 		  	Log.startTestCase("STEP 6: Enter test data needed for email,  billing/contact details and billing/contact details and click Purchase");
-		  
+		  	
+		  	try {
+		  	
 			Continue_Page.txtbx_Billingemail(driver).sendKeys(Test_Data.User_Email);
 			Continue_Page.txtbx_Billingfirstname(driver).sendKeys(Test_Data.User_First_Name);
 			Continue_Page.txtbx_Billinglastname(driver).sendKeys(Test_Data.User_Last_Name);
@@ -146,14 +207,25 @@ public class NewTest {
 			Continue_Page.purchase_btn(driver).click();
 			
 			Log.info("Click Purchase Button");
+		  	} catch (Exception e){
+
+		    	Log.error("Error while executing Step 6 Test");
+		    	
+		    }
+		  	
+		  	finally {
+		  		Log.endTestCase("STEP 6");
+		  	};
 			
-			Log.endTestCase("STEP 6");
+			
 	  }	
 			
 	  @Test (description="STEP 7: Confirm that you have placed the Order in ‘Transaction Results’ page")
 	  public void confirmOrder() throws InterruptedException {
 		  
 		  	Log.startTestCase("STEP 7: Confirm that you have placed the Order in ‘Transaction Results’ page");
+		  	
+		  	try {
 		  	
 		  	WebDriverWait wait = new WebDriverWait(driver, 15);
 		    wait.until(ExpectedConditions.titleContains("Transaction Results"));
@@ -164,7 +236,15 @@ public class NewTest {
 		  	
 		  	Log.info("Finish Confirming the Order");
 		  	
-		  	Log.endTestCase("STEP 7");
+		  	} catch (Exception e){
+
+		    	Log.error("Error while executing Step 7 Test");
+		    	
+		    }
+		  	
+		  	finally {
+		  		Log.endTestCase("STEP 7");
+		  	};
 		  
 	  }
 		  
