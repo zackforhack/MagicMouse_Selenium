@@ -18,9 +18,9 @@ Supported Web Browser: Chrome, Firefox
 
 ## Framwork Prerequisites
 
-Mac/Windows envinroment
-Java 1.9
-Maven 3.7
+Mac/Windows envinroment,
+Java 1.9,
+Maven 3.7,
 Firefox and Chrome installed in your Mac/Windows computer
 
 ## Usage
