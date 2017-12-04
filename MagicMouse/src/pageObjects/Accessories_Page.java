@@ -17,6 +17,10 @@ public class Accessories_Page {
 
 	    element = driver.findElement(By.xpath("//div[h2[a[contains(text(),'Magic Mouse')]]]"));
 	    
+	    Log.info("Link to Magic Mouse Product Column found");
+	    
+	    return element;
+	    
     		}catch (Exception e){
 	    
 	    Log.error("Link to Magic Mouse Product Column is not found");
@@ -24,8 +28,6 @@ public class Accessories_Page {
 	    throw(e);
 	    
     		}
-
-	    return element;
 
 	}
 
@@ -35,15 +37,17 @@ public class Accessories_Page {
 
 	    element = driver.findElement(By.xpath("//input[@name='Buy']"));
 	    
+	    Log.info("Magic Mouse Add To Cart Button found");
+	    
+	    return element;
+	    
     		}catch (Exception e){
 	    
-	    Log.info("Magic Mouse Add To Cart Button is not found");
+	    Log.error("Magic Mouse Add To Cart Button is not found");
 	    
 	    throw(e);
 	    
     		}
-
-	    return element;
 
 	}
     

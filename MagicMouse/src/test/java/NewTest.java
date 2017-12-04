@@ -45,16 +45,17 @@ public class NewTest {
 	
 	  @Test (description="STEP 1: Go to http://store.demoqa.com/")
 	  public void launchSite() throws InterruptedException {
+		  
 		    Log.startTestCase("STEP 1: Go to http://store.demoqa.com/");
 		    
 		    try {
 		    	
-		    
+		    	Log.info("Going to http://store.demoqa.com/");
 			driver.get("http://store.demoqa.com");
-			
+	    
+		    Log.info("Verifying http://store.demoqa.com/");
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 		    wait.until(ExpectedConditions.titleContains("ONLINE STORE"));
-	    
 			assertEquals(driver.getTitle(), "ONLINE STORE | Toolsqa Dummy Test site");
 			
 		    }catch (Exception e){
@@ -75,17 +76,21 @@ public class NewTest {
 		    Log.startTestCase("STEP 2: Go to Product category and select Accessories");
 		    
 		    try {
+		    	
+		    	Log.info("Looking for Accessories Tab");
 			Actions actions = new Actions(driver);
 			WebElement menu = Home_Page.product_Category_tab(driver);
 			actions.moveToElement(menu);
 			WebElement subMenu = Home_Page.lnk_accessories(driver);
 			actions.moveToElement(subMenu);
+		
+			
+			Log.info("Going to Accessories page");
 			actions.click().build().perform();
-			Log.info("Go to Accessories pages");
 			
+			Log.info("Verifying Accessories Page");
 			WebDriverWait wait = new WebDriverWait(driver, 15);
-		    wait.until(ExpectedConditions.titleContains("Accessories"));
-			
+		    wait.until(ExpectedConditions.titleContains("Accessories"));	
 			assertEquals(driver.getTitle(), "Accessories | ONLINE STORE");
 			
 		    }catch (Exception e){
@@ -108,8 +113,10 @@ public class NewTest {
 		  	
 		  	try {
 		  		
+		  	Log.info("Clicking Add to Cart Button");
 			Accessories_Page.magic_Mouse_Add_To_Cart_Button(driver).click();
-			Log.info("Click Add to Cart Button");
+			
+			Log.info("Verifying Item has been added");
 			assertTrue(Accessories_Page.item_Has_been_added_show(driver));
 			
 		  	}catch (Exception e){
@@ -131,19 +138,20 @@ public class NewTest {
 		  	Log.startTestCase("STEP 4: Click on “Checkout” and confirm you have 1 Magic Mouse in your Check-Out Page");
 		  	
 		  	try {
+		  
+		  	Log.info("Clicking Checkout Button");	
 			Home_Page.lnk_Checkout(driver).click();
-			Log.info("Click Checkout Button");
+			
 			
 			//Confirm have 1 magic mouse in checkout page
-			
+			Log.info("Verifying Checkout page");
 			WebDriverWait wait = new WebDriverWait(driver, 15);
-		    wait.until(ExpectedConditions.titleContains("Checkout"));
-			
+		    wait.until(ExpectedConditions.titleContains("Checkout"));		
 			assertEquals(driver.getTitle(), "Checkout | ONLINE STORE");
+			
+			Log.info("Verifying 1 Magic Mouse");
 			assertEquals(Checkout_Page.get_Top_Product_Name(driver),Test_Data.Product_Name);
 			assertEquals(Checkout_Page.get_Top_Product_Quantity(driver),"1");
-			
-			Log.info("Confirm Have 1 Magic Mouse In Checkout Page");
 			
 		  	} catch (Exception e){
 
@@ -164,12 +172,12 @@ public class NewTest {
 		  	
 		  	try {
 			
+		  	Log.info("Clicking on Continue Button");
 			Checkout_Page.lnk_continue(driver).click();
-			Log.info("Click on Continue Button");
-			
+						
+			Log.info("Verifying Checkout Page");
 			WebDriverWait wait = new WebDriverWait(driver, 15);
-		    wait.until(ExpectedConditions.titleContains("Checkout"));
-		    
+		    wait.until(ExpectedConditions.titleContains("Checkout"));	    
 			assertEquals(driver.getTitle(), "Checkout | ONLINE STORE");
 			
 		  	} catch (Exception e){
@@ -191,7 +199,8 @@ public class NewTest {
 		  	Log.startTestCase("STEP 6: Enter test data needed for email,  billing/contact details and billing/contact details and click Purchase");
 		  	
 		  	try {
-		  	
+		  		
+		  	Log.info("Entering on Billing User Data");
 			Continue_Page.txtbx_Billingemail(driver).sendKeys(Test_Data.User_Email);
 			Continue_Page.txtbx_Billingfirstname(driver).sendKeys(Test_Data.User_First_Name);
 			Continue_Page.txtbx_Billinglastname(driver).sendKeys(Test_Data.User_Last_Name);
@@ -200,13 +209,11 @@ public class NewTest {
 			Continue_Page.txtbx_Billingphone(driver).sendKeys(Test_Data.User_Telephone);
 			Continue_Page.dropdown_Billingcountry(driver).selectByVisibleText(Test_Data.User_Country);
 			Continue_Page.txtbx_Billingstate(driver).sendKeys(Test_Data.User_State);
-			Continue_Page.txtbx_Shippingstate(driver).sendKeys(Test_Data.User_State);
+			Continue_Page.txtbx_Shippingstate(driver).sendKeys(Test_Data.User_State);			
 			
-			Log.info("Finish Filling Test User Data");
-			
+			Log.info("Clicking Purchase Button");
 			Continue_Page.purchase_btn(driver).click();
 			
-			Log.info("Click Purchase Button");
 		  	} catch (Exception e){
 
 		    	Log.error("Error while executing Step 6 Test");
@@ -227,14 +234,14 @@ public class NewTest {
 		  	
 		  	try {
 		  	
+		  	Log.info("Verifying Transaction Results Page");
 		  	WebDriverWait wait = new WebDriverWait(driver, 15);
-		    wait.until(ExpectedConditions.titleContains("Transaction Results"));
-		  
+		    wait.until(ExpectedConditions.titleContains("Transaction Results"));	  
 		  	assertEquals(driver.getTitle(), "Transaction Results | ONLINE STORE");
-		  	assertEquals(Transaction_Results_Page.get_Top_Product_Name(driver), Test_Data.Product_Name);
-		  	assertEquals(Transaction_Results_Page.get_Top_Product_Quantity(driver), "1");
 		  	
-		  	Log.info("Finish Confirming the Order");
+		  	Log.info("Confirming the 1 Magic Mouse Order");
+		  	assertEquals(Transaction_Results_Page.get_Top_Product_Name(driver), Test_Data.Product_Name);
+		  	assertEquals(Transaction_Results_Page.get_Top_Product_Quantity(driver), "1");		  	
 		  	
 		  	} catch (Exception e){
 

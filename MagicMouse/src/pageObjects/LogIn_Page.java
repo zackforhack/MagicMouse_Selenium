@@ -18,6 +18,10 @@ public class LogIn_Page {
 
 	element = driver.findElement(By.id("log"));
 	
+	Log.info("Textbox Username found");
+	
+	return element;
+	
 	}catch (Exception e){
 	
 	Log.error("Textbox Username is not found");
@@ -26,7 +30,6 @@ public class LogIn_Page {
 	
 	}
 
-	return element;
 }
 
 	public static WebElement txtbx_Password(WebDriver driver){
@@ -34,6 +37,10 @@ public class LogIn_Page {
 		try {
 
 		element = driver.findElement(By.id("pwd"));
+		
+		Log.error("Textbox Password found");
+		
+		return element;
 		
 		}catch (Exception e){
 		
@@ -43,7 +50,7 @@ public class LogIn_Page {
 		
 		}
 		
-        return element;
+        
 }
 
     public static WebElement btn_LogIn(WebDriver driver){
@@ -51,6 +58,10 @@ public class LogIn_Page {
     		try {
 
     		element = driver.findElement(By.id("login"));
+    		
+    		Log.info("Login Button found");
+    		
+    		return element;
     		
     		}catch (Exception e){
     		
@@ -60,7 +71,6 @@ public class LogIn_Page {
     		
     		}
 
-    		return element;
 }
 
 }

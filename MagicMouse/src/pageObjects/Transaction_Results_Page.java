@@ -15,6 +15,7 @@ public class Transaction_Results_Page {
     	try {
 
 	    element = driver.findElement(By.xpath("//table[@class='wpsc-purchase-log-transaction-results']"));
+	    return element.findElement(By.xpath("//td[1]")).getText();
 	    
     	}catch (Exception e){
 	    
@@ -23,9 +24,6 @@ public class Transaction_Results_Page {
 		throw(e);
 	    
 	}
-	    
-    return element.findElement(By.xpath("//td[1]")).getText();
-
     }
     
     public static String get_Top_Product_Quantity(WebDriver driver){
@@ -34,6 +32,8 @@ public class Transaction_Results_Page {
 
 	    element = driver.findElement(By.xpath("//table[@class='wpsc-purchase-log-transaction-results']"));
 	    
+	    return element.findElement(By.xpath("//td[3]")).getText();
+	    
     	}catch (Exception e){
 	    
 	    Log.error("Top Product Quantity found");
@@ -41,8 +41,6 @@ public class Transaction_Results_Page {
 		throw(e);
 	    
 	}
-	    
-    return element.findElement(By.xpath("//td[3]")).getText();
 
     }
 }

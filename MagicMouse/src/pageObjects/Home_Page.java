@@ -17,6 +17,10 @@ import utility.Log;
 
     element = driver.findElement(By.id("account"));
     
+    Log.info("Link to My account found.");
+    
+    return element;
+    
     }catch (Exception e){
 
         Log.error("Link to My account is not found.");
@@ -24,8 +28,6 @@ import utility.Log;
         throw(e);
 
     }
-
-    return element;
 
     }
 
@@ -35,6 +37,10 @@ import utility.Log;
 
     element = driver.findElement(By.id("account_logout"));
     
+    Log.info("Link to logout found");
+    
+    return element;
+    
 	}catch (Exception e){
     
 		Log.error("Link to logout is not found");
@@ -42,8 +48,6 @@ import utility.Log;
 		throw(e);
     
 	}
-
-    return element;
 
     }
  
@@ -53,6 +57,10 @@ import utility.Log;
 
 	    element = driver.findElement(By.xpath("//a[contains(text(),'Product Category')]"));
 	    
+	    Log.info("Product Category tab found");
+	    
+	    return element;
+	    
 	 	}catch (Exception e){
 	 	    
 			Log.error("Product Category tab is not found");
@@ -60,8 +68,6 @@ import utility.Log;
 			throw(e);
 	    
 		}
-
-	    return element;
 
 	}
  
@@ -71,6 +77,10 @@ import utility.Log;
 	 
 	    element = driver.findElement(By.xpath("//a[contains(text(),'Accessories')]"));
 	    
+	    Log.info("Link to Accessories found");
+	    
+	    return element;
+	    
 	 	}catch (Exception e){
 	    
 	 		Log.error("Link to Accessories is not found");
@@ -78,8 +88,6 @@ import utility.Log;
 			throw(e);
 		    
 		}
-
-	    return element;
 
 	}
  
@@ -89,6 +97,10 @@ import utility.Log;
 	 
 	    element = driver.findElement(By.xpath("//a[@title='Checkout']"));
 	    
+	    Log.info("Link to Checkout found");
+	    
+	    return element;
+	    
 	 	}catch (Exception e){
 	    
 	    Log.error("Link to Checkout is not found");
@@ -96,8 +108,6 @@ import utility.Log;
 		throw(e);
 	    
 	    }
-	 	
-	    return element;
 
 	}
 

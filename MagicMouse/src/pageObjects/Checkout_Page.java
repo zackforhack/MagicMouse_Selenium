@@ -18,6 +18,10 @@ public class Checkout_Page {
 
     	    element = driver.findElement(By.xpath("//a[span[contains(text(),'Continue')]]"));
     	    
+    	    Log.info("Link to Continue found");
+    	    
+    	    return element;
+    	    
     		}catch (Exception e){
     	    
     	    Log.error("Link to Continue is not found");
@@ -26,7 +30,7 @@ public class Checkout_Page {
     	     
     		} 
 
-	    return element;
+	    
 
 	}
     
@@ -42,6 +46,10 @@ public class Checkout_Page {
 
 	    element = driver.findElement(By.xpath("//td[@class='wpsc_product_quantity wpsc_product_quantity_0']/child::*"));
 	    
+	    Log.info("Top Product Quantity found");
+	    
+	    return element.findElement(By.xpath("//input[@name='quantity']")).getAttribute("value");
+	    
     		}catch (Exception e){
 	    
 	    Log.error("Top Product Quantity is not found");
@@ -49,8 +57,6 @@ public class Checkout_Page {
 	    throw(e);
 	     
 		} 
-	    
-	    return element.findElement(By.xpath("//input[@name='quantity']")).getAttribute("value");
 
     }
 }
